@@ -1,0 +1,12 @@
+eagerpy==0.29.0
+foolbox==3.3.1
+future==0.18.2
+matplotlib==3.3.4
+ml-collections==0.1.0
+numpy==1.18.5
+Pillow==7.0.0
+scipy==1.6.0
+seaborn==0.11.1
+timm==0.4.12
+torch==1.4.0
+torchvision==0.5.0

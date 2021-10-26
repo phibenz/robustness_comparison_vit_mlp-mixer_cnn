@@ -1,0 +1,1 @@
+docker build -t phibenz/robustness_comparison .
