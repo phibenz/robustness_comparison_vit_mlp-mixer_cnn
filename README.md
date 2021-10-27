@@ -25,6 +25,12 @@ For the white-box attacks you can run the corresponding script.
 ### FGSM attack
 `bash ./experiments/attack_fgsm.sh`
 
+### C&W
+`bash ./experiments/attack_cw.sh`
+
+### DeepFool
+`bash ./experiments/attack_deepfool.sh`
+
 ## Docker
 We provide a Dockerfile to get better reproducibility of the results presented in the paper. Have a look in the docker folder.
 
