@@ -31,6 +31,9 @@ For the white-box attacks you can run the corresponding script.
 ### DeepFool
 `bash ./experiments/attack_deepfool.sh`
 
+## Universal Adversarial Attack
+Run `bash ./experiments/attack_uap.sh`
+
 ## Docker
 We provide a Dockerfile to get better reproducibility of the results presented in the paper. Have a look in the docker folder.
 
