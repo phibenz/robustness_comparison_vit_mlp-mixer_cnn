@@ -31,6 +31,9 @@ For the white-box attacks you can run the corresponding script.
 ### DeepFool
 `bash ./experiments/attack_deepfool.sh`
 
+### Transferability with I-FGSM
+`bash ./experiments/transferability.sh`
+
 ## Universal Adversarial Attack
 Run `bash ./experiments/attack_uap.sh`
 
