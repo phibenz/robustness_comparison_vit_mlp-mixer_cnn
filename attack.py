@@ -17,7 +17,7 @@ from config import IMAGENET_PATH, NEURIPS_DATA_PATH, NEURIPS_CSV_PATH
 
 torch.backends.cudnn.benchmark = True
 
-parser = argparse.ArgumentParser(description='T2T-ViT Adversarial Attack')
+parser = argparse.ArgumentParser(description='Adversarial Attack')
 # Dataset / Model parameters
 parser.add_argument('--source-model', nargs="+", default=['resnet101'], help='Name of model to train')
 parser.add_argument('--target-model', nargs="+", default=['resnet101'], help='Name of model to train')
@@ -187,8 +187,6 @@ def main():
                 with amp_autocast():
                     if 'ViT' in sm_name:                        
                         lo = sm(norm_vit(x_adv))
-                    elif 'sam_' in sm_name:
-                        lo = sm(norm_vit(x_adv))
                     elif 'mixer_' in sm_name:
                         lo = sm(norm_vit(x_adv))
                     else:
@@ -227,8 +225,6 @@ def main():
                 for tm_idx, (tm, tm_name) in enumerate(zip(target_model, args.target_model)):
                     if 'ViT' in tm_name:
                         lo = tm(norm_vit(x_unnorm + delta))
-                    elif 'sam_' in tm_name:
-                        lo = tm(norm_vit(x_unnorm + delta))
                     elif 'mixer_' in tm_name:
                         lo = tm(norm_vit(x_unnorm + delta))                        
                     else:
@@ -251,7 +247,7 @@ def main():
 
 
         num_samples += len(x)
-        _logger.info('\n-- Untargeted Accuracy --')
+        _logger.info('\n-- Untargeted ASR --')
         for tm_idx, tm in enumerate(args.target_model):
             _logger.info('{} -> {}'.format(args.source_model, tm))
             _logger.info('{}'.format(1.-acc_untargeted[tm_idx]/num_samples))
@@ -275,7 +271,7 @@ def main():
             break
 
     # Results
-    _logger.info('\n-- Untargeted Accuracy --')
+    _logger.info('\n-- Untargeted ASR --')
     for tm_idx, tm in enumerate(args.target_model):
         _logger.info('{} -> {}'.format(args.source_model, tm))
         _logger.info('{}'.format(1.-acc_untargeted[tm_idx]/num_samples))
@@ -310,11 +306,11 @@ def main():
         linf_norm_string += '{} '.format(norm_linf[tm_idx, -1] / num_samples)
 
     _logger.info('{}'.format(model_string))
-    _logger.info('-- Untargeted Accuracy --')
+    _logger.info('-- Untargeted ASR --')
     _logger.info(untargeted_string)
     _logger.info('-- Targeted Accuracy --')
     _logger.info(targeted_string)
-    _logger.info('-- Untargeted / Targeted Accuracy --')
+    _logger.info('-- Untargeted ASR / Targeted Accuracy --')
     _logger.info(untar_tar_string)
     _logger.info('-- L2 norm --')
     _logger.info(l2_norm_string)
