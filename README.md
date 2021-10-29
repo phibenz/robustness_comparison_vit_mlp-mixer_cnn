@@ -36,10 +36,13 @@ For the white-box attacks you can run the corresponding script.
 ## Black-box attack
 * Query-based
 * Transfer-based
+For the white-box attacks you can run the corresponding script.
+
 ### Boundary attack
 ### Bandits(TD) attack
 ### Transferability with I-FGSM
 `bash ./experiments/transferability.sh`
+
 
 ## Universal Adversarial Attack
 Run `bash ./experiments/attack_uap.sh`
