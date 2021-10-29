@@ -31,6 +31,13 @@ For the white-box attacks you can run the corresponding script.
 ### DeepFool
 `bash ./experiments/attack_deepfool.sh`
 
+
+
+## Black-box attack
+* Query-based
+* Transfer-based
+### Boundary attack
+### Bandits(TD) attack
 ### Transferability with I-FGSM
 `bash ./experiments/transferability.sh`
 
