@@ -39,7 +39,9 @@ For the white-box attacks you can run the corresponding script.
 For the white-box attacks you can run the corresponding script.
 
 ### Boundary attack
+`bash ./experiments/attack_boundary.sh`
 ### Bandits(TD) attack
+`bash ./experiments/attack_bandits.sh`
 ### Transferability with I-FGSM
 `bash ./experiments/transferability.sh`
 
