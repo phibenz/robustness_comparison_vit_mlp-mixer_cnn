@@ -60,7 +60,7 @@ We would like to credit the following resources, which helped tremendously in ou
  * [Foolbox](https://github.com/bethgelab/foolbox)
  * [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
  * [vision_transformer](https://github.com/google-research/vision_transformer)
- * [blackbox-bandits](https://github.com/blackbox-bandits/blackbox-attacks-bandits-priors)
+ <!--* [blackbox-bandits](https://github.com/blackbox-bandits/blackbox-attacks-bandits-priors)-->
 
 ## Citation
 ```
