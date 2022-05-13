@@ -221,7 +221,7 @@ def main():
         elif args.dataset == 'imagenet':
             y_gt = lbl 
             rnd = torch.randint(1, num_classes,(len(lbl),))
-            y_tar = (y_tar+rnd) % num_classes
+            y_tar = (y_gt+rnd) % num_classes
         
         x_unnorm = unnorm(x.cuda())
         y_gt = y_gt.cuda()
